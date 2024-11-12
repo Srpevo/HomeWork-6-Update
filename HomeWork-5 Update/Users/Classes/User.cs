@@ -16,11 +16,7 @@ namespace HomeWork_6_Update.Users.Classes
 
         }
 
-        private bool ContainsOnlyOnce(string Email, char Target)
-        {
-            int Counter = Email.Count(x => x == Target);
-            return Counter == 1;
-        }
+       
 
         public string name
         {
