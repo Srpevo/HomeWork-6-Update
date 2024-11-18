@@ -22,9 +22,9 @@ namespace HomeWork_6_Update.Users.Base
         }
 
 
-        public string _name {  get; set; }
-        public string _email { get; set; }
-        public string _password { get; set; }
+        public string? _name {  get; set; }
+        public string? _email { get; set; }
+        public string? _password { get; set; }
 
 
 
