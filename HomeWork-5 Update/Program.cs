@@ -21,7 +21,6 @@ while (true)
 
         Console.Clear();
         Console.WriteLine("User account successfully created!");
-        Console.WriteLine($"Welcome, {user.name}.");
         break;
     }
     catch (IncorrectNameEntryException ex)
@@ -46,6 +45,22 @@ while (true)
     Console.Clear();
 }
 
-Console.WriteLine("\n=======================================");
-Console.WriteLine($"User {user.name} created successfully.");
-Console.WriteLine("=======================================");
+Console.WriteLine();
+Console.WriteLine("=== Please log in to continue working ===");
+
+while (true)
+{
+    Console.WriteLine("Enter Name: ");
+    if (user.name == Console.ReadLine())
+    {
+        Console.WriteLine("Enter Password: ");
+        if (user.password == Console.ReadLine())
+        {
+            Console.WriteLine($"Welcome, {user.name}.");
+            break;
+        }
+    }
+    Console.WriteLine("\nPlease press any key to try again...");
+    Console.ReadKey();
+    Console.Clear();
+}
